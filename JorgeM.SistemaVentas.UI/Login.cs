@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using JorgeM.SistemaVentas.CapaEntidad;
+using JorgeM.SistemaVentas.CapaNegocio;
 namespace JorgeM.SistemaVentas.UI
 {
     public partial class Login : Form
@@ -24,10 +25,20 @@ namespace JorgeM.SistemaVentas.UI
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            Inicio form = new Inicio();
-            form.Show();
-            this.Hide();
-            form.FormClosing += frm_closing;
+            Usuario? usuario =  new CN_Usuario().Listar().FirstOrDefault(u => u.Documento == txtDocumento.Text && u.Clave == txtClave.Text);
+
+            if(usuario != null)
+            {
+                Inicio form = new Inicio();
+                form.Show();
+                this.Hide();
+                form.FormClosing += frm_closing;
+            }
+            else
+            {
+                MessageBox.Show("No se encontró al usuario","Mensaje",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+            }           
+
         }
 
         private void frm_closing(object sender, FormClosingEventArgs e)
