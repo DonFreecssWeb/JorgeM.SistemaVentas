@@ -29,7 +29,7 @@ namespace JorgeM.SistemaVentas.UI
 
             if(usuario != null)
             {
-                Inicio form = new Inicio();
+                Inicio form = new Inicio(usuario);
                 form.Show();
                 this.Hide();
                 form.FormClosing += frm_closing;
