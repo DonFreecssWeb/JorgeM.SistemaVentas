@@ -61,7 +61,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(877, 91);
+            panel1.Size = new Size(1176, 91);
             panel1.TabIndex = 0;
             // 
             // lblUsuario
@@ -101,7 +101,7 @@
             menu.Items.AddRange(new ToolStripItem[] { menuusuarios, menumantenedor, menuventas, menucompras, menuclientes, menuproveedores, menureportes, menuacercade });
             menu.Location = new Point(0, 91);
             menu.Name = "menu";
-            menu.Size = new Size(877, 73);
+            menu.Size = new Size(1176, 73);
             menu.TabIndex = 0;
             menu.Text = "menuStrip1";
             // 
@@ -137,14 +137,14 @@
             // submenuCategoria
             // 
             submenuCategoria.Name = "submenuCategoria";
-            submenuCategoria.Size = new Size(224, 26);
+            submenuCategoria.Size = new Size(157, 26);
             submenuCategoria.Text = "Categoria";
             submenuCategoria.Click += submenuCategoria_Click;
             // 
             // submenuProducto
             // 
             submenuProducto.Name = "submenuProducto";
-            submenuProducto.Size = new Size(224, 26);
+            submenuProducto.Size = new Size(157, 26);
             submenuProducto.Text = "Producto";
             submenuProducto.Click += submenuProducto_Click;
             // 
@@ -264,7 +264,7 @@
             contenedor.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             contenedor.Location = new Point(0, 167);
             contenedor.Name = "contenedor";
-            contenedor.Size = new Size(880, 376);
+            contenedor.Size = new Size(1206, 667);
             contenedor.TabIndex = 3;
             // 
             // Inicio
@@ -272,7 +272,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(224, 224, 224);
-            ClientSize = new Size(877, 542);
+            ClientSize = new Size(1176, 833);
             Controls.Add(menu);
             Controls.Add(panel1);
             Controls.Add(contenedor);

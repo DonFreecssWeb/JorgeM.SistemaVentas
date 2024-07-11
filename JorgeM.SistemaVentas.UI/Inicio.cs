@@ -9,9 +9,12 @@ namespace JorgeM.SistemaVentas.UI
         private static Usuario _usuarioActual;
         private static Form _formularioActivo = null;
         private static IconMenuItem _menuActivo;
-        public Inicio(Usuario usuario)
+        public Inicio(Usuario usuario = null)
         {
-            _usuarioActual = usuario;
+            if (usuario == null)
+                _usuarioActual = new Usuario { NombreCompleto = "ADMIN PREDEF", IdUsuario = 1 };
+            else
+                _usuarioActual = usuario;
             InitializeComponent();
 
         }
@@ -47,7 +50,7 @@ namespace JorgeM.SistemaVentas.UI
             menuClick.BackColor = Color.SkyBlue;
             _menuActivo = menuClick;
 
-            //si ya hay formulario anterior
+            //si ya hay formulario anterior, cerrarlo
             if (_formularioActivo != null)
             {
                 _formularioActivo.Close();
